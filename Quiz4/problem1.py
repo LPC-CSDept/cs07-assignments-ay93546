@@ -4,6 +4,7 @@ prev = random.randint(0, 100)
 while True:
   if prev % 2 == 0:
     even = True
+  print(prev)
   next = random.randint(0, 100)
   if next % 2 == 0 and even:
     print(prev, next)
