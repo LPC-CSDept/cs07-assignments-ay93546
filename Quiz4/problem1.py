@@ -9,6 +9,5 @@ while True:
   if next % 2 == 0 and even:
     print(prev, next)
     break
-  else:
-    even = False
-    prev = next
+  even = False
+  prev = next
