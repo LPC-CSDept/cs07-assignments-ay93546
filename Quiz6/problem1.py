@@ -11,7 +11,7 @@ def getinput(N, S):
     scores_list.append(scores)
   return id_list, name_list, scores_list
 
-def findHighestScore(total_list, id_list, name_list, scores_list):
+def findHighestScore(total_list, id_list, name_list):
   highscore = max(total_list)
   idx = total_list.index(highscore)
   print("Highest Total Score:", highscore, 'from', id_list[idx], name_list[idx])
