@@ -1,46 +1,57 @@
-'''
+#5-1
 import random
-r = int(input("Enter row amount: "))
-c = int(input("Enter column amount: "))
+def generate():
+  n = random.randint(1, 10)
+  list1 = []
+  list2 = []
+  for i in range(n):
+    list1.append(random.randint(0, 9))
+    list2.append(random.randint(0, 9))
+  return list1, list2  
+def sumProduct(l1, l2):
+  product_list = []
+  for i in range(len(l1)):
+    product_list.append(l1[i] * l2[i])
+  return sum(product_list)
 
-list2d = []
-for i in range(r):
-  row = []
-  for j in range(c):
-    row.append(random.randint(0, 100))
-  list2d.append(row)
+if __name__ == '__main__':
+  list1, list2 = generate()  
+  result = sumProduct(list1, list2)
+  print(list1)
+  print(list2)
+  print(result)
 
-for i in range(r):
-  for j in range(c):
-    print(list2d[i][j], end = " ")
-  print()
+#5-2
+def stripspace(str):
+  res = ''
+  for letter in str:
+    if letter.isupper():
+      res += letter      
+  return res
+if __name__ == '__main__':
+  message = input('Enter string: ')
+  result = stripspace(message)
+  print(result)
 
-maxr = 0
-maxc = 0
-for i in range(r):
-  rsum = sum(list2d[i])
-  print("R{} sum:".format(i+1), rsum)
-  if rsum > maxr:
-    maxr = rsum
+#5-3
+isspace = lambda char: char.isspace()
+def mystrip(msg):
+  res = ''
+  for char in msg:
+    if isspace(char) == False:
+      res += char
+  return res
+if __name__ == '__main__':
+  msg = input('Enter message: ')
+  res = mystrip(msg)
+  print (res)
 
-for i in range(c):
-  csum = 0
-  for j in range(r):
-    csum += list2d[j][i]
-  print("C{} sum:".format(i+1), csum)
-  if csum > maxc:
-    maxc = csum
-
-print("Max RSum:", maxr, "\t", "Max CSum:", maxc)
-'''
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots()
-label = ['Math', 'English', 'Physics', 'Computer']
-bill = [100, 90, 80, 60]
-mary = [90, 80, 70, 100]
-ax.bar(label, bill, label = 'Bill')
-ax.bar(label, mary, bottom = bill, label = 'Mary')
-ax.set_xticks(label)
-ax.set_title("Stacked graph for scores")
-ax.legend()
-plt.show()
+#5-4
+def getalnum(msg):
+  for char in msg:
+    if char.isalnum():
+      yield char
+msg = 'Python programming section 2'
+res = getalnum(msg)
+for v in res:
+	print (v)
