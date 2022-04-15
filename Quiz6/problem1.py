@@ -39,7 +39,7 @@ def printAll(id_list, name_list, scores_list):
   for i in range(N):
     total = sum(scores_list[i])
     avg = total / S    
-    print(id_list[i], name_list[i], "Total:", total, "Avg:", avg)
+    print(id_list[i], name_list[i], scores_list[i], "Total:", total, "Avg:", avg)
     total_list.append(total)
   return total_list
 
