@@ -1,5 +1,14 @@
-list1 = [1, 3, 4, 5, 6]
-list2 = [2, 4, 5, 6, 7]
+import random
+list1 = []
+list2 = []
+
+def input():
+  for i in range(random.randint(0, 10)):
+    list1.append(random.randint(0, 10))
+  for j in range(random.randint(0, 10)):
+    list2.append(random.randint(0, 10))
+  print(list1, list2)
+  return list1, list2
 getevens = lambda num: num % 2 == 0
 def getmerged(list1, list2):
   result = []
@@ -12,6 +21,7 @@ def getmerged(list1, list2):
   for num in result:
     yield num
 
+input()
 result = getmerged(list1, list2)
 for v in result:
   print(v)
