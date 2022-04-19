@@ -64,10 +64,14 @@ values = [100, 90, 90]
 zip_values = zip(names, values)
 for zipval in zip_values:
   print(zipval)
-'''
+
 #7
 id  = [1001, 1002, 1003]
 courses = ['C Programming', 'Java Programming', 'Python Programming']
 zip_values = zip(id, courses)
 for zipval in zip_values:
   print(zipval)
+'''
+#8
+heading = ['ID', 'Name', 'Address']
+valueset = [ (10, 'Kim', '124 Main'), (20, 'Jim', '345 Grand'), (30, 'Bill', '123 Blvd')]
