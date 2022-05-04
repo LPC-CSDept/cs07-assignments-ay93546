@@ -74,22 +74,21 @@ for zipval in zip_values:
 
 #8
 heading = ['ID', 'Name', 'Address']
-valueset = [ (10, 'Kim', '124 Main'), (20, 'Jim', '345 Grand'), (30, 'Bill', '123 Blvd')]
+valueset = [(10, 'Kim', '124 Main'), (20, 'Jim', '345 Grand'), (30, 'Bill', '123 Blvd')]
 
 zipped = [dict(zip(heading, val)) for val in valueset]
 for k in zipped:
   print(k)
 
 #9
-mylist = [ 10, 20, 30, 40, 50]
+mylist = [10, 20, 30, 40, 50]
 res = map(lambda val: int(val / 2), mylist)
 for v in res:
   print(v, end=' ')
 '''
 #10
-mylist = [ 5, 10, 15, 20, 21, 25, 27]
+mylist = [5, 10, 15, 20, 21, 25, 27]
 
-numtest = lambda val: val % 2 == 0
-map = (numtest, mylist)
-for v in map:
+numtest = map(lambda val: 0 if val % 2 == 0 else 1, mylist)
+for v in numtest:
   print(v, end=' ')

@@ -22,4 +22,3 @@ print(list1)
 for i in range(len(list1)):
 	if ( list1[i]['birthYear'] >= 1930 ) and ( list1[i]['birthYear'] <= 1950 ):
 		print ('------------', list1[i]['primaryName'])
-  
