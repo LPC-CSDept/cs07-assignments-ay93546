@@ -92,3 +92,4 @@ mylist = [5, 10, 15, 20, 21, 25, 27]
 numtest = map(lambda val: 0 if val % 2 == 0 else 1, mylist)
 for v in numtest:
   print(v, end=' ')
+  
