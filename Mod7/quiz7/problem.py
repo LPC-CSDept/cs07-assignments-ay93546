@@ -46,3 +46,4 @@ n = 0
 for value in map(lambda x: 10000000 + x['ID'], list1):
   print(value, list1[n]['Name'], reduce(lambda a, b: a + b, list1[n]['Scores']))
   n += 1
+  
