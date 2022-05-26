@@ -1,2 +1,2 @@
 language = "python3"
-run = "python Mod7/quiz7/problem.py"
+run = "python final/question1.py"
