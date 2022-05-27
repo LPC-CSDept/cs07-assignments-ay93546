@@ -52,7 +52,6 @@ for i in range(len(caFemale)):
 #question 1-3
 caMales = list(filter(lambda x: x['state'] == 'CA' and x['gender'] == 'Male', allData))
 
-
 for male in caMales:
   male["number"] = int(male["number"].replace(",",""))
 
@@ -74,16 +73,16 @@ for female in flFemales:
 
 flFemalesE = list(filter(lambda x: x['name'][0]=="E", flFemales))
 flFemalesE = sorted(flFemalesE, key=lambda x: x['number'], reverse=True)
-#print(flFemalesE)
 
+for female in flFemales:
+  female["number"] = str(female["number"])
+  
 for people in flFemalesE[:10]:
   print(people)
 
 print("-------------------------------------")
 
 #question 1-4
-for female in flFemales:
-  female["number"] = str(female["number"])
 flFemales = list(map(lambda x:int(x['number'].replace(",","")),flFemales[:10]))
 sumnum = lambda x,y: x+y
 totalNumber = reduce(sumnum, flFemales, 0)
